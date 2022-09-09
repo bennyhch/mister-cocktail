@@ -1,0 +1,11 @@
+.reelContainer {
+  display: flex;
+}
+
+.drinkImgContainer {
+  width: 80%;
+}
+
+.drinkImg {
+  width: 500px
+}
