@@ -12,9 +12,15 @@ const Topbar: React.FC = () => {
   const submitHandler = (e: React.FormEvent<HTMLFormElement> ) => {
     e.preventDefault();
     if (inputRef.current) {
-      navigate(`/search/${inputRef.current.value}`)
+      navigate(`/search/${inputRef.current.value}`);
+      inputRef.current.value = '';
     }
   }
+
+  const goHomeHandler = () => {
+    navigate('/')
+  }
+
   return (
     <>
       <div className={styles.topbarContainer}>
@@ -22,7 +28,7 @@ const Topbar: React.FC = () => {
           <input type="text" ref={inputRef} />
           <button>Search</button>
         </form>
-        <h4>My bar</h4>
+        <h4 onClick={goHomeHandler}>My bar</h4>
       </div>
       <Outlet />
     </>

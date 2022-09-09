@@ -13,7 +13,7 @@ const SearchPage: React.FC = () => {
       .then(resp => resp.json())
       // .then(data => console.log(data.drinks))
       .then(data => setDrinks(data.drinks))
-  }, [])
+  }, [wrd])
 
   if (drinks.length === 0) {
     return <h1>Loading ...</h1>

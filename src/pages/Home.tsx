@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Reels from '../components/Reels';
-import Topbar from '../components/Topbar';
 import { DrinkCategory } from '../interface';
 
 const Home: React.FC = () => {
