@@ -1,5 +1,6 @@
 .reelContainer {
   display: flex;
+  overflow-x: auto;
 }
 
 .drinkImgContainer {
@@ -7,5 +8,16 @@
 }
 
 .drinkImg {
-  width: 500px
+  width: 100px
+}
+
+.drink {
+  border: 1px solid red;
+  transition: 1s;
+}
+
+.drink:hover {
+  cursor: pointer;
+  background-color: aquamarine;
+  opacity: 0.5;
 }

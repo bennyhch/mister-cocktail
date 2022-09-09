@@ -1,0 +1,13 @@
+
+
+.box {
+  border: 1px solid black;
+}
+
+.imgContainer {
+  width: 80%;
+}
+
+.imgContainer img {
+  width: 150px;
+}

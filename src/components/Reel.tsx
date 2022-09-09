@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { DrinksByCategory } from '../interface';
 import styles from './reel.module.css'
+import {useNavigate} from 'react-router-dom';
 const baseReelUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=';
 
 interface Category {
@@ -9,7 +10,12 @@ interface Category {
 
 const Reel: React.FC<Category> = ({reelName}) => {
   let newReelName = reelName.replace(' ', '_'); 
-  const [reelDrinks, setReelDrinks] = useState<DrinksByCategory[]>([])
+  let navigate = useNavigate();
+  const [reelDrinks, setReelDrinks] = useState<DrinksByCategory[]>([]);
+  
+  const drinkHandler = (id: string) => {
+    navigate(`/${id}`)
+  }
 
 
   useEffect(() => {
@@ -25,7 +31,7 @@ const Reel: React.FC<Category> = ({reelName}) => {
           {reelDrinks.map(reelDrink => {
             const {idDrink, strDrink, strDrinkThumb} = reelDrink;
             return (
-              <div key={idDrink}>
+              <div key={idDrink} className={styles.drink} onClick={drinkHandler.bind(null, idDrink)}>
                 <div className={styles.drinkImgContainer}>
                   <img src={strDrinkThumb} alt={strDrink} className={styles.drinkImg}/>
                 </div>

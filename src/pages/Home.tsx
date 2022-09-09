@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Reels from '../components/Reels';
+import Topbar from '../components/Topbar';
 import { DrinkCategory } from '../interface';
 
 const Home: React.FC = () => {
@@ -10,10 +11,9 @@ const Home: React.FC = () => {
       .then(resp => resp.json())
       .then(data => setCategories(data.drinks));
   }, []) 
-  
+
   return (
     <>
-      <div>Searchbar</div>
       <div>slider</div>
       <Reels categories={categories}/>
     </>
