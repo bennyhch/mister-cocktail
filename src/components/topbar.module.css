@@ -1,5 +1,20 @@
 .topbarContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: baseline;
+  background-color: #282727;
+}
+
+.inputField {
+  padding: 3px 8px;
+  outline: none;
+  border-radius: 5px;
+}
+
+.formContainer {
+  display: flex;
+}
+
+.topbarContainer h1 {
+  cursor: pointer;
 }

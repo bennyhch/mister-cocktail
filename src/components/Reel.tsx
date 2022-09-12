@@ -25,7 +25,7 @@ const Reel: React.FC<Category> = ({reelName}) => {
   }, [])
 
   return (
-    <div>
+    <div className={styles.reel}>
       <h1>{reelName}</h1>
         <section className={styles.reelContainer}>
           {reelDrinks.map(reelDrink => {
@@ -35,9 +35,7 @@ const Reel: React.FC<Category> = ({reelName}) => {
                 <div className={styles.drinkImgContainer}>
                   <img src={strDrinkThumb} alt={strDrink} className={styles.drinkImg}/>
                 </div>
-                <h5>
-                {strDrink}
-                </h5>
+                  <h5>{strDrink}</h5>
               </div>
             )
           })}

@@ -1,7 +1,10 @@
+.reel h1{
+  text-transform: uppercase;
+}
+
 .reelContainer {
   display: flex;
   overflow-x: auto;
-
 }
 
 .reelContainer::-webkit-scrollbar {
@@ -19,16 +22,31 @@
 }
 
 .drinkImg {
-  width: 100px
+  width: 8.2rem;
+  border-radius: 10px 10px 0 0;
+
 }
 
 .drink {
-  border: 1px solid red;
+  border: 1px solid white;
+  border-radius: 10px;
   transition: 1s;
+  margin: 5px;
+  text-align: center;
+  background-color: rgb(60, 58, 58);
+  /* background-color: #282727; */
+  
 }
+
+.drink h5 {
+  padding: 0 5px;
+  text-transform: capitalize;
+}
+
+
 
 .drink:hover {
   cursor: pointer;
-  background-color: aquamarine;
   opacity: 0.5;
+  padding: 5px;
 }
