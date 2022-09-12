@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styles from './topbar.module.css';
 import { Outlet } from "react-router-dom";
 import {BiSearchAlt2} from 'react-icons/bi';
+import cocktail from '../asset/cocktail.png'
 
 const Topbar: React.FC = () => {
   let navigate = useNavigate();
