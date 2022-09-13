@@ -3,15 +3,11 @@ import { useNavigate } from "react-router-dom";
 import styles from './topbar.module.css';
 import { Outlet } from "react-router-dom";
 import {BiSearchAlt2} from 'react-icons/bi';
-import cocktail from '../asset/cocktail.png'
 
 const Topbar: React.FC = () => {
   let navigate = useNavigate();
   const inputRef = useRef<HTMLInputElement | null>(null);
   
-
-
-
   const submitHandler = (e: React.FormEvent<HTMLFormElement> ) => {
     e.preventDefault();
     if (inputRef.current) {
@@ -28,8 +24,10 @@ const Topbar: React.FC = () => {
     <>
       <div className={styles.topbarContainer}>
         <form onSubmit={submitHandler} className={styles.formContainer}>
-          <input type="text" ref={inputRef} placeholder='Search your cocktail' className={styles.inputField}/>
-          <button className={styles.searchBtn}><BiSearchAlt2 size={15}/></button>
+          <div className={styles.wrapper}>
+              <BiSearchAlt2 className={styles.icon}/>
+            <input type="text" ref={inputRef} placeholder='Search your cocktail' className={styles.inputField}/>
+          </div>
         </form>
         <h1 onClick={goHomeHandler}>My Bar</h1>
       </div>

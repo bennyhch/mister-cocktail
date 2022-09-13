@@ -2,3 +2,15 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.searchPageContainer {
+  padding-left: 4%;
+}
+
+.searchPageContainer h1 {
+  text-align: center;
+}
+
+.errorSearchPageContainer {
+  text-align: center;
+}

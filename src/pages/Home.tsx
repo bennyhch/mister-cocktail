@@ -14,7 +14,6 @@ const Home: React.FC = () => {
 
   return (
     <div className={styles.homeContainer}>
-      <div>slider</div>
       <Reels categories={categories}/>
     </div>
   )

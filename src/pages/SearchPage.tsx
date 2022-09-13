@@ -15,7 +15,14 @@ const SearchPage: React.FC = () => {
       .then(data => setDrinks(data.drinks))
   }, [wrd])
 
-
+  if (!drinks) {
+    return ( 
+      <div className={styles.errorSearchPageContainer}>
+        <h1>Sorry, we're not able to find a match...</h1>
+        <p>Try another search</p>
+      </div>
+    )
+  }
 
   if (drinks.length === 0) {
     return <h1>Loading ...</h1>
@@ -24,7 +31,7 @@ const SearchPage: React.FC = () => {
 
 
   return (
-    <>
+    <div className={styles.searchPageContainer}>
       <h1>Search Result: {wrd}</h1>
       <main className={styles.drinkContainer}>
         {(drinks.map(drink => {
@@ -32,7 +39,7 @@ const SearchPage: React.FC = () => {
         }))}
       </main>
 
-    </>
+    </div>
   )
 }
 
