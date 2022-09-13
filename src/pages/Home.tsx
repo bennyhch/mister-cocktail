@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Reels from '../components/Reels';
 import { DrinkCategory } from '../interface';
+import styles from './home.module.css';
 
 const Home: React.FC = () => {
   const [categories, setCategories] = useState<DrinkCategory[]>([]);
@@ -12,10 +13,10 @@ const Home: React.FC = () => {
   }, []) 
 
   return (
-    <>
+    <div className={styles.homeContainer}>
       <div>slider</div>
       <Reels categories={categories}/>
-    </>
+    </div>
   )
 }
 

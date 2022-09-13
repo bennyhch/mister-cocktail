@@ -1,25 +1,40 @@
 .drinkContainer {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  /* align-items: stretch; */
   /* height: 90vh; */
+
 }
 
 .imgContainer {
   width: 20%;
+  margin-right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description {
+  width: 30%;
+}
+
+.description header {
+  font-weight: bold;
+  font-size: 2.5rem;
+  padding-bottom: 5%;
 }
 
 .drinkContainer section {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  margin-top: 10%;
 }
 
 .drinkImg {
   width: 100%;
+  border: 1px solid white;
+  border-radius: 20px;
 }
 
-.drinkContainer ul {
-  list-style-type: none;
-}
 
 .description span{
   color: #03e9f4;
@@ -28,17 +43,4 @@
 .description span:nth-child(1)
 {
   filter: hue-rotate(110deg);
-}
-
-/* .description span:nth-child(3)
-{
-  filter: hue-rotate(110deg);
-}
-.description span:nth-child(5)
-{
-  filter: hue-rotate(50deg);
-} */
-
-.description h1 {
-  color: #03e9f4;
 }

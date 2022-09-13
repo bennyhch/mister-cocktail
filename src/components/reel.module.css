@@ -1,5 +1,6 @@
 .reel h1{
   text-transform: uppercase;
+    color: #03e9f4;
 }
 
 .reelContainer {
@@ -34,16 +35,12 @@
   margin: 5px;
   text-align: center;
   background-color: rgb(60, 58, 58);
-  /* background-color: #282727; */
-  
 }
 
 .drink h5 {
   padding: 0 5px;
   text-transform: capitalize;
 }
-
-
 
 .drink:hover {
   cursor: pointer;

@@ -25,7 +25,7 @@ const Drink: React.FC = () => {
         <img src={strDrinkThumb} alt={strDrink} className={styles.drinkImg} />
       </section>
       <section className={styles.description}>
-        <h1>{strDrink}</h1>
+        <header>{strDrink}</header>
         <article>
           <p>
             <span>Category</span>: {strCategory}

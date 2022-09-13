@@ -25,7 +25,7 @@ const Reel: React.FC<Category> = ({reelName}) => {
   }, [])
 
   return (
-    <div className={styles.reel}>
+    < >
       <h1>{reelName}</h1>
         <section className={styles.reelContainer}>
           {reelDrinks.map(reelDrink => {
@@ -41,7 +41,7 @@ const Reel: React.FC<Category> = ({reelName}) => {
           })}
         </section>
 
-    </div>
+    </>
   )
 }
 
