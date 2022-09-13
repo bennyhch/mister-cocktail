@@ -25,7 +25,9 @@ const Topbar: React.FC = () => {
       <div className={styles.topbarContainer}>
         <form onSubmit={submitHandler} className={styles.formContainer}>
           <div className={styles.wrapper}>
+            <button>
               <BiSearchAlt2 className={styles.icon}/>
+            </button>
             <input type="text" ref={inputRef} placeholder='Search your cocktail' className={styles.inputField}/>
           </div>
         </form>
