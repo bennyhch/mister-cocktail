@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { useNavigate } from "react-router-dom";
 import styles from './topbar.module.css';
 import { Outlet } from "react-router-dom";
@@ -31,7 +31,7 @@ const Topbar: React.FC = () => {
             <input type="text" ref={inputRef} placeholder='Search your cocktail' className={styles.inputField}/>
           </div>
         </form>
-        <h1 onClick={goHomeHandler}>My Bar</h1>
+        <h1 onClick={goHomeHandler}>MISTER COCKTAIL</h1>
       </div>
       <Outlet />
     </>
